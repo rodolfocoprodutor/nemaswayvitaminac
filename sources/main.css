@@ -171,6 +171,7 @@ header .container img{
 .s-benefits .container .benefits__img img{
     max-height: 280px;
     max-width: fit-content;
+    object-fit: contain;
 }
 
 .s-depoimentos{
