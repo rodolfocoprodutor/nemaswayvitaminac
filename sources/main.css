@@ -277,6 +277,33 @@ header .container img{
     font-weight: 400;
     font-size: 80%;
 }
+/* Página de obrigado */
+.s-banner-obrigado{
+    background-color: var(--brand-color1);
+}
+.s-banner-obrigado .container{
+    max-width: 1260px;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 4rem;
+}
+.s-banner-obrigado .content_congratulations h2{
+    font-size: clamp(4.5rem, 8vw, 6rem);
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.s-banner-obrigado .content_congratulations h3{
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.s-banner-obrigado .content_congratulations p{
+    font-size: clamp(1rem, 1.2vw, 1.6rem);
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
 
 footer{
     padding-top: 2rem;
