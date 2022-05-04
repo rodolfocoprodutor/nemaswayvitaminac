@@ -94,9 +94,9 @@ p{
     line-height: 160%;
 }
 button {
-    width: max-content;
+    width: fit-content;
     height: 4rem;
-    padding: 0 4rem;
+    padding: 0 2rem;
     color: #FFFFFF;
     border-radius: 0.8rem;
     font-size: var(--body-text);
@@ -169,8 +169,7 @@ header .container img{
     justify-items: center;
 }
 .s-benefits .container .benefits__img img{
-    display: block;
-    height: 100%;
+    max-height: 280px;
     max-width: fit-content;
 }
 
