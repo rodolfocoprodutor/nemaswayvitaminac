@@ -271,6 +271,7 @@ header .container img{
     font-weight: 600;
     border-radius: .6rem;
     font-size: 90%;
+    cursor: pointer;
 }
 .s-faq .container .content_faq p{
     padding: .6rem 1.6rem;
