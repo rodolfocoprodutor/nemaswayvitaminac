@@ -52,15 +52,22 @@
 
     <!-- Style of page -->
     <link rel="stylesheet" href="sources/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
         <div class="container">
-            <picture>
-                <source class="img" media="(min-width:768px)" srcset="/assets/vitamina-c_banner_desk.webp">
-                <source media="(min-width:320px)" srcset="/assets/vitamina-c_banner_mob.webp">
-                <img src="assets/vitamina-c_banner_desk.webp" alt="Banner do site Vitamina C" width="1440" height="732">
-            </picture>
+            <a href="#offer">
+                <picture>
+                    <source class="img" media="(min-width:768px)" srcset="/assets/vitamina-c_banner_desk.webp">
+                    <source media="(min-width:320px)" srcset="/assets/vitamina-c_banner_mob.webp">
+                    <img src="assets/vitamina-c_banner_desk.webp" alt="Banner do site Vitamina C" width="1440" height="732">
+                </picture>
+            </a>
         </div>
     </header>
     <main>
@@ -87,7 +94,7 @@
                 </div>
                 <div class="benefits__img grid">
                     <img src="assets/vitamina_c_laranja.webp" alt="Banner do site Vitamina C" width="507" height="523">
-                    <a href="#oferta"><button>Desfrute de todos os benefícios</button></a>
+                    <a href="#offer"><button>Desfrute de todos os benefícios</button></a>
                 </div>
             </div>
         </section>
@@ -102,7 +109,7 @@
                             "Uma amiga me indicou o a Vitamina C da NemasWay e comecei a tomar, já no primeiro mês vi muita diferença na minha disposição que me incomodava demais, e hoje adoro bem todos os dias. 😄"
                         </p>
                         <img src="assets/vitamina_c_depoimento_mirtes.webp" alt="Foto de uma mulher" class="profile">
-                        <span class="dados">Mirtes Gonçalves <small class="dados">34 anos, São Paulo</small> </span>
+                        <span class="dados">Mirtes Gonçalves <br> <small>34 anos, São Paulo</small> </span>
                         
                     </div>
                     <div class="depoimento item">
@@ -110,7 +117,7 @@
                             "Sou cliente de várias outras marcas de suplementos, mas fiquei impressionada com a qualidade dos produtos da NemasWay, realmente o time de nutricionistas deles é excelente."
                         </p>
                         <img src="assets/depoimento_vitaminac_cristina_martins.webp" alt="Foto de uma mulher" class="profile">
-                        <span class="dados">Cristina Martins <small class="dados">37 anos, São Paulo</small> </span>
+                        <span class="dados">Cristina Martins <br> <small>37 anos, São Paulo</small> </span>
                         
                     </div>
                     <div class="depoimento item">
@@ -118,7 +125,7 @@
                             "Minha mãe e minha avó tinham indisposição o dia todo e reclamavam muito de dores pelo corpo então acho que eu já tinha tendência, mas com o a vitamina c consegui parar isso e ter disposição o dia todo todos os dias e é claro eu comprei pra elas também. 🥰"
                         </p>
                         <img src="assets/depoimento_vitaminac_patricia_pimenta.webp" alt="Foto de uma mulher" class="profile">
-                        <span class="dados">Patricia Pimenta <small class="dados">42 anos, São Paulo</small> </span>
+                        <span class="dados">Patricia Pimenta <br> <small>42 anos, São Paulo</small> </span>
                         
                     </div>
 
@@ -128,7 +135,7 @@
             </div>
         </section>
 
-        <section class="s-oferta">
+        <section class="s-oferta" id="offer">
             <div class="container">
                 <div class="header">
                    <h2>Você pode <span>desfrutar todos os benefícios</span>  da vitamina C</h2>
@@ -209,17 +216,17 @@
     </main>
     <footer>
         <div class="container">
-            <p class="p-footer">
-                CNPJ: 35.302.828/0001-89
-                Nemasway
-                Rua Maria José, 395, Bela Vista – São Paulo/SP, 01324-010
-                Telefone comercial: (11) 96608-1577
-            </p>
-                <nav>
-                    <a href="politica-de-privacidade.html" target="_BLANK">Política de Privacidade</a>
-                    <a href="termos.html" target="_BLANK">Termos de uso</a>
-                </nav>
-            <P class="copyright">©Nemasway 2022 – Todos os direitos reservados</P>
+            <p>CNPJ: 35.302.828/0001-89</p>
+            <p>Nemasway</p>
+            <p>Rua Maria José, 395, Bela Vista – São Paulo/SP, 01324-010
+                Telefone comercial: (11) 96608-1577</p>  
+            <nav>
+                <ul>
+                    <li><a href="politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a></li>
+                    <li><a href="termos.html" target="_blank" rel="noopener noreferrer">Termos de uso</a></li>
+                </ul>
+            </nav>    
+            <p>©Nemasway 2022 – Todos os direitos reservados</p>
         </div>
     </footer>
 </body>

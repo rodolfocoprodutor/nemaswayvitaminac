@@ -27,30 +27,31 @@
 
     /* Font and typography */
     /* .5rem = 8px / 1rem = 16px */
-    --body-font: 'Poppins', sans-serif;/*
-    --header: 4.0rem;
-    --title: 3.4rem;
-    --subtitle: 2.4rem;
-    --body-text: 2.0rem;
-    --details: 1.8rem;
-    --smallest: 1.6rem;
+    --body-font: 'Poppins', sans-serif;
+    --header: 5.8rem;
+    --title: 3.8rem;
+    --subtitle: 2.9rem;
+    --subtitle-h4: 2.2rem;
+    --body-text: 1.9rem;
+    --details: 1.6rem;
+    --smallest: 1.2rem;
 
     /* Title center*/
 
 }
 
-/* Responsive typography *//*
+/* Responsive typography */
 @media only screen and (orientation: portrait)  {
     :root {
-        --header: 2.8rem;
-        --title: 2rem;
-        --subtitle: 2rem;
+        --header: 4.8rem;
+        --title: 3.2rem;
+        --subtitle: 1.9rem;
         --body-text: 1.6rem;
-        --details: 1.4rem;
-        --smallest: 1.2rem;
+        --details: 1.2rem;
+        --smallest: 1.0rem;
     
     }
-}*/
+}
 *,
 *::after,
 *::before{
@@ -68,11 +69,11 @@
     box-sizing:border-box;
     font-family: var(--body-font);
     font-display: swap;
+    font-size: 62.5%;
 }
 html{
     scroll-behavior: smooth;
     direction: ltr;
-    font-size: clamp(1rem, 1.2vw, 1,6rem);
 }
 body{
     counter-reset: num;
@@ -82,17 +83,31 @@ img{
     height: auto;
 }
 h2{
-    margin-top: .8rem;
-    line-height: 160%;
+    font-size: var(--title);
 }
 h3{
-    margin-top: 1rem;
-    line-height: 180%;
-    
+    font-size: var(--subtitle);
+}
+h4{
+    font-size: var(--subtitle-h4);
 }
 p{ 
-    line-height: 160%;
+    font-size: var(--body-text);
 }
+b{
+    font-size: inherit;
+}
+li{
+    font-size: var(--body-text);
+}
+summary{
+    font-size: var(--body-text);
+    font-weight: 600;
+}
+span{
+    font-size: inherit;
+}
+
 button {
     width: fit-content;
     height: 4rem;
@@ -150,7 +165,7 @@ header .container img{
 }
 
 .s-benefits .container {
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     background-image: url(../assets/vitamina.svg);
     background-repeat: no-repeat;
@@ -160,7 +175,10 @@ header .container img{
 .s-benefits .container .benefits__info h2{
     color: var(--brand-color1);
     text-transform: uppercase;
-    font-size: 220%;
+
+}
+.s-benefits .container .benefits__info p{
+    font-size: 1.6rem;
 }
 
 .s-benefits .container .benefits__img{
@@ -186,8 +204,11 @@ header .container img{
     text-align: center;
     color: #FFFFFF;
 }
+.s-depoimentos .container .dados{
+    font-size: var(--body-text);
+}
 .s-depoimentos .container .content_depoimentos{
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 .s-depoimentos .container .content_depoimentos .depoimento{
@@ -197,10 +218,11 @@ header .container img{
     "profile dados";
     gap: 1rem;
 }
-.s-depoimentos .container .content_depoimentos .depoimento .profile{
+.s-depoimentos .container .content_depoimentos .depoimento img{
     display: block;
-    width: 64px;
+    max-width: max-content;
     height: 64px;
+    object-fit: contain;
 }
 .texto{
     grid-area: texto;
@@ -237,7 +259,7 @@ header .container img{
    background-color: #f2f2f8;
 }
 .s-garantia .container{
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 .s-garantia .container .garantia_selo{
     display: block;
@@ -251,33 +273,33 @@ header .container img{
     padding: 0 .3rem;
 }
 
-.s-faq .container .content_header h2{
+
+.s-faq .container {
+    justify-items: center;
+}
+.s-faq .container h2 {
     text-align: center;
 }
-
-.s-faq .container .content_header h3{
+.s-faq .container h3 {
     text-align: center;
-    font-weight: 600;
 }
 .s-faq .container .content_faq{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
     width: 90%;
 }
-.s-faq .container .content_faq details{
-    margin-bottom: .6rem;
+
+.s-faq .container .content_faq details summary{
+    padding: 1.6rem 1.6rem;
+    border-radius: .8rem;
+    background-color: rgb(221, 221, 221);
 }
-.s-faq .container .content_faq summary{
-    background-color: #f2f2f8;
-    padding: .6rem 1.6rem;
-    font-weight: 600;
-    border-radius: .6rem;
-    font-size: 90%;
-    cursor: pointer;
+.s-faq .container .content_faq details p{
+    padding: .8rem 1.6rem;
+    border-radius: .8rem;
 }
-.s-faq .container .content_faq p{
-    padding: .6rem 1.6rem;
-    font-weight: 400;
-    font-size: 80%;
-}
+
 /* Página de obrigado */
 .s-banner-obrigado{
     background-color: var(--brand-color1);
@@ -286,7 +308,7 @@ header .container img{
     max-width: 1260px;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 4rem;
 }
 .s-banner-obrigado .content_congratulations h2{
@@ -305,34 +327,29 @@ header .container img{
     font-weight: 400;
 }
 
-
-footer{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+footer {
     background-color: var(--brand-color1);
+    padding-top: 6.4rem;
+    padding-bottom: 3.2rem;
+}
+footer p{
+    text-align: center;
+    color: #FFF;
+    font-size: 1.4rem;
 }
 footer nav{
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-    place-content: center;
+    display: grid;
+    max-width: 960px;
+    justify-self: center;
 }
-footer .p-footer{
-    white-space: pre-wrap;
-    color: #fff;
-    text-align: center;
-    font-size: 80%;
+footer ul{
+    display: flex;
+    gap: 2rem;
 }
 footer a{
     text-align: center;
-    color: #fff;
-    text-align: center;
-    font-size: 80%;
-    font-weight: 500;
+    color: #FFF;
+    font-size: 1.4rem;
+    text-decoration: underline;
 }
-footer .copyright{
-    color: #fff;
-    text-align: center;
-    font-size: 70%;
-    text-align: center;
-}
+
